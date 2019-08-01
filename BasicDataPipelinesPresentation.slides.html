@@ -13254,7 +13254,7 @@ a.anchor-link {
 <li>Why do this to yourself?</li>
 <li>What do we get from using Airflow and Docker?</li>
 <li>How to do this right now?</li>
-<li>Why is a bad idea?</li>
+<li>Why is this a bad idea?</li>
 <li>How to do this better?</li>
 </ol>
 
@@ -13273,8 +13273,26 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Need to do Extract Transform Load (ETL) on a regular basis/in realtime.</li>
+<li>Need to do Extract Transform Load (<strong>ETL</strong>) on a regular basis/in realtime.</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>Separation of concerns AKA modularity</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>(<strong>awkward shoehorn</strong>) Control vs Data flow.</li>
 </ul>
 
@@ -13428,13 +13446,12 @@ a.anchor-link {
         <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
     <span class="p">])</span>
 
-    <span class="n">run_args</span> <span class="o">=</span> <span class="n">docker_run_args</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    <span class="n">docker_command</span> <span class="o">=</span> <span class="s2">&quot;bash -c &#39;/run_</span><span class="si">{}</span><span class="s2">.sh&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">task_name</span><span class="p">)</span>
+    <span class="n">docker_command</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;bash -c &#39;/run_</span><span class="si">{task_name}</span><span class="s2">.sh&#39;&quot;</span>
 
     <span class="n">operation_run</span> <span class="o">=</span> <span class="n">docker_client</span><span class="o">.</span><span class="n">containers</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
         <span class="n">name</span><span class="o">=</span><span class="n">docker_name</span><span class="p">,</span>
         <span class="n">command</span><span class="o">=</span><span class="n">docker_command</span><span class="p">,</span>
-        <span class="o">**</span><span class="n">run_args</span>
+        <span class="o">**</span><span class="n">docker_run_args</span>
     <span class="p">)</span>
 
     <span class="k">return</span> <span class="n">operation_run</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
@@ -13456,13 +13473,20 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Problems-we've-run-into">Problems we've run into<a class="anchor-link" href="#Problems-we've-run-into">&#182;</a></h2><ul>
+<h2 id="Problems-we've-run-into">Problems we've run into<a class="anchor-link" href="#Problems-we've-run-into">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>Loading DAGs into Airflow</li>
 </ul>
 
 </div>
 </div>
-</div><div class="fragment">
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13508,6 +13532,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Improving">Improving<a class="anchor-link" href="#Improving">&#182;</a></h2><p><strong>Bar to beat: 6 months to a year, no dedicated administration</strong></p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Serverless containers (e.g. AWS Fargate)</li>
 <li>Kubernetes (scaling)</li>
@@ -13515,19 +13546,26 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section><section>
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Different-Paradigm">Different Paradigm<a class="anchor-link" href="#Different-Paradigm">&#182;</a></h2><p><strong>Warning: Speculative</strong></p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>$\mu$Service Architecture - even more modular</li>
-<li>Declarative/reconcilation approach</li>
+<li>Declarative/reconciliation approach</li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
