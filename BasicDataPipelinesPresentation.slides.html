@@ -13264,36 +13264,35 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="imgs/whyyyy.gif" alt=""></p>
+<h1 id="1.-Why-do-you-want-a-data-engineer-pipeline?">1. Why do you want a data <del>engineer</del> pipeline?<a class="anchor-link" href="#1.-Why-do-you-want-a-data-engineer-pipeline?">&#182;</a></h1><p><img src="imgs/whyyyy.gif" alt=""></p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1.-Why-do-you-want-a-data-engineer-pipeline?">1. Why do you want a data <del>engineer</del> pipeline?<a class="anchor-link" href="#1.-Why-do-you-want-a-data-engineer-pipeline?">&#182;</a></h1><ul>
-<li>Need to do Extract Transform Load (ETL) on a regular basis/in realtime.</li>
-<li>Desireable to separate out different steps in action.</li>
-<li>(awkward shoehorn) Control vs Data flow.</li>
-<li>This is a good way to get from 0 to ~5 data pipelines.</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="2.1-Why-do-you-want-to-use-Airflow?">2.1 Why do you want to use Airflow?<a class="anchor-link" href="#2.1-Why-do-you-want-to-use-Airflow?">&#182;</a></h1><ul>
-<li>What is Airflow?</li>
-<li><strong>Visibility!!!</strong></li>
-</ul>
-<p><img src="imgs/airflow_visibility.png" alt=""></p>
-<p><img src="imgs/airflow_visibility_II.png" alt=""></p>
 <ul>
-<li>Scheduling and conditionality</li>
+<li>Need to do Extract Transform Load (ETL) on a regular basis/in realtime.</li>
+<li>Separation of concerns AKA modularity</li>
+<li>(<strong>awkward shoehorn</strong>) Control vs Data flow.</li>
 </ul>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./imgs/assembly_line.gif" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is a good way to get from 0 to ~5 data pipelines.</p>
 
 </div>
 </div>
@@ -13301,11 +13300,39 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="2.2-Why-do-you-want-to-use-Docker?">2.2 Why do you want to use Docker?<a class="anchor-link" href="#2.2-Why-do-you-want-to-use-Docker?">&#182;</a></h1><ul>
-<li>Isolation</li>
-<li>Security</li>
-<li>Dependency closure</li>
-</ul>
+<h1 id="2.1-Why-do-you-want-to-use-Airflow?">2.1 Why do you want to use Airflow?<a class="anchor-link" href="#2.1-Why-do-you-want-to-use-Airflow?">&#182;</a></h1><p><img src="imgs/airblowing.gif" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-is-Airflow?">What is Airflow?<a class="anchor-link" href="#What-is-Airflow?">&#182;</a></h2><p><img src="imgs/airflow-example-dag.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Visibility">Visibility<a class="anchor-link" href="#Visibility">&#182;</a></h2><p><img src="imgs/airflow_visibility.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Visibility-(again)">Visibility (again)<a class="anchor-link" href="#Visibility-(again)">&#182;</a></h2><p><img src="imgs/airflow_visibility_II.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conditional-Scheduling">Conditional Scheduling<a class="anchor-link" href="#Conditional-Scheduling">&#182;</a></h2><p><img src="imgs/airflow-example-dag2.png" alt=""></p>
 
 </div>
 </div>
@@ -13313,24 +13340,143 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3.-How-to-do-this-Right-Now">3. How to do this Right Now<a class="anchor-link" href="#3.-How-to-do-this-Right-Now">&#182;</a></h1><ul>
+<h1 id="2.2-Why-do-you-want-to-use-Docker-(inside-Airflow)?">2.2 Why do you want to use Docker (inside Airflow)?<a class="anchor-link" href="#2.2-Why-do-you-want-to-use-Docker-(inside-Airflow)?">&#182;</a></h1><p><img src="imgs/flopping.gif" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Resource-efficient-Isolation">Resource efficient Isolation<a class="anchor-link" href="#Resource-efficient-Isolation">&#182;</a></h2><p><img src="imgs/docker_isolation.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dependency-Closure">Dependency Closure<a class="anchor-link" href="#Dependency-Closure">&#182;</a></h2><p><img src="imgs/docker-closure.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.-How-to-do-this-Right-Now">3. How to do this Right Now<a class="anchor-link" href="#3.-How-to-do-this-Right-Now">&#182;</a></h1><p><img src="imgs/rightnow.gif" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-you-need:">What you need:<a class="anchor-link" href="#What-you-need:">&#182;</a></h2><ul>
 <li>Using your <em>ahem</em> bare metal, FOSS Data Science Env.</li>
-<li>Airflow using <code>LocalExecutor</code>.</li>
-<li>This requires a separate state DB - postgres, mysql, etc.</li>
-<li>Read/Write Access to Docker socket (<code>/var/run/docker.sock</code>)</li>
-<li>Tasks wrapped into Docker images, with scripts. Run tasks using Docker Python SDK.</li>
-<li><a href="https://github.com/cityofcapetown/airflow_docker_datapipelines">Large public sector organisation Docker image</a>.</li>
 </ul>
 
 </div>
 </div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Airflow Checklist:<ul>
+<li><code>LocalExecutor</code>.</li>
+<li>Separate DB for Airflow state - PostgreSQL, MySQL, etc.</li>
+<li>Docker Python SDK</li>
+<li>Read/write access to Docker socket (<code>/var/run/docker.sock</code>)</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/cityofcapetown/airflow_docker_datapipelines">Large public sector organisation Airflow Docker image</a>.</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>Docker Checklist:</p>
+<ul>
+<li>Docker images with dependencies</li>
+<li><p>Scripts to run tasks inside images:</p>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="nv">PYTHONPATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PIPELINE_DIR</span><span class="s2">&quot;</span> python3 <span class="s2">&quot;</span><span class="nv">$PIPELINE_DIR</span><span class="s2">&quot;</span>/my_module/my_task.py
+</pre></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pipeline_task</span><span class="p">(</span><span class="n">task_name</span><span class="p">):</span>
+    <span class="n">docker_name</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span>
+        <span class="n">PIPELINE_PREFIX</span><span class="p">,</span>
+        <span class="n">task_name</span><span class="p">,</span>
+        <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+    <span class="p">])</span>
+
+    <span class="n">run_args</span> <span class="o">=</span> <span class="n">docker_run_args</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">docker_command</span> <span class="o">=</span> <span class="s2">&quot;bash -c &#39;/run_</span><span class="si">{}</span><span class="s2">.sh&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">task_name</span><span class="p">)</span>
+
+    <span class="n">operation_run</span> <span class="o">=</span> <span class="n">docker_client</span><span class="o">.</span><span class="n">containers</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">docker_name</span><span class="p">,</span>
+        <span class="n">command</span><span class="o">=</span><span class="n">docker_command</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">run_args</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">operation_run</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="4.-Why-is-this-a-Bad-Idea?">4. Why is this a Bad Idea?<a class="anchor-link" href="#4.-Why-is-this-a-Bad-Idea?">&#182;</a></h1><ul>
+<h1 id="4.-Why-is-this-a-Bad-Idea?">4. Why is this a Bad Idea?<a class="anchor-link" href="#4.-Why-is-this-a-Bad-Idea?">&#182;</a></h1><p><img src="imgs/badidea.gif" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Problems-we've-run-into">Problems we've run into<a class="anchor-link" href="#Problems-we've-run-into">&#182;</a></h2><ul>
 <li>Loading DAGs into Airflow</li>
-<li>Scaling beyond one machine (mention crazy Celery scheme)</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Scaling beyond one docker host</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>Weird performance problems:<ul>
 <li>noisy neighbours</li>
 <li>Heavy load on Docker daemon</li>
@@ -13341,15 +13487,42 @@ a.anchor-link {
 
 </div>
 </div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="imgs/IDK.gif" alt=""></p>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="5.-How-to-do-this-better?">5. How to do this better?<a class="anchor-link" href="#5.-How-to-do-this-better?">&#182;</a></h1><ul>
-<li>6 months to a year, no dedicated administration</li>
-<li>Kubernetes (scaling)</li>
+<h1 id="5.-How-to-do-this-better?">5. How to do this better?<a class="anchor-link" href="#5.-How-to-do-this-better?">&#182;</a></h1><p><img src="imgs/learning.gif" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Improving">Improving<a class="anchor-link" href="#Improving">&#182;</a></h2><p><strong>Bar to beat: 6 months to a year, no dedicated administration</strong></p>
+<ul>
 <li>Serverless containers (e.g. AWS Fargate)</li>
-<li>Different paradigm - declarative approach.</li>
+<li>Kubernetes (scaling)</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Different-Paradigm">Different Paradigm<a class="anchor-link" href="#Different-Paradigm">&#182;</a></h2><p><strong>Warning: Speculative</strong></p>
+<ul>
+<li>$\mu$Service Architecture - even more modular</li>
+<li>Declarative/reconcilation approach</li>
 </ul>
 
 </div>
